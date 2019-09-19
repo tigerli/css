@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding-left: 50px;
+            padding-right: 15px;
+        }
+        article {
+            border: solid 5px silver;
+            width: 400px;
+            height: 500px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        article section{
+            flex: 1 0 100px;
+            background: blueviolet;
+            background-clip: content-box;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        article section div {
+           flex: 1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           font-size: 20px;
+        }
+        article section span {
+            padding: 10px;
+            background: #333;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <section>
+            <div>aaaa</div>
+            <span onclick="up(this)">up</span>
+        </section>
+        <section>
+            <div>bbbb</div>
+            <span onclick="up(this)">up</span>
+        </section>
+        <section>
+            <div>cccc</div>
+            <span onclick="up(this)">up</span>
+        </section>
+    </article>
+    <script>
+        function up(el){
+            let order = getComputedStyle(el.parentElement, null).order;
+            el.parentElement.style.order = order*1-1
+        }
+    </script>
+</body>
+
+</html>

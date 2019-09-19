@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@keyframes</title>
+    <style>
+        .react{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: fixed;
+            /* 指定使用哪个动画 */
+            animation-name: mymove;
+            /* 动画运行/结束时间 */
+            animation-duration: 5s;
+            /* 运行函数 */
+            animation-timing-function: ease-out;
+            /* 延时执行秒数 */
+            animation-delay: .1s;
+            /* 循环次数 infinite 无限循环*/
+            animation-iteration-count: infinite;
+            /* 反方向播放 alternate*/
+            animation-direction: alternate;
+
+            /* animation: mymove 5s ease-out 0 infinite; */
+        }
+        @keyframes mymove{
+            0% {
+                top: 0;
+                left: 20%;
+                background-color: red;
+            }
+            25% {
+                top: 0;
+                left: 80%;
+                background-color: blue;
+            }
+            50% {
+                top: 80%;
+                left: 80%;
+                background-color: green;
+            }
+            75% {
+                top: 80%;
+                left: 20%;
+                background-color: black;
+            }
+            100%{
+                top: 0;
+                left: 20%;
+                background-color:red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="react">
+
+    </div>
+</body>
+</html>

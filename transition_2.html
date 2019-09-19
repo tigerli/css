@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transition</title>
+    <style>
+
+        .ceng{
+            margin: 10px auto;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            cursor: pointer;
+            /* transition: all 3s .1s ease; */
+            /* 过渡属性 */
+            transition-property: all;
+            /* 过渡时间 */
+            transition-duration: .3s;
+            /* 延迟时间 */
+            transition-delay: 0;
+            /* 过度函数 */
+            /* ease: 开始结尾慢，中间快 */
+            /* linear: 匀速 */
+            /* ease-in: 开始慢，之后越来越快 */
+            /* ease-out: 开始快，之后越来越慢 */
+            /* ease-in-out: 开始结束慢，中间快 */
+            /* step-start: 没有过度效果 */
+            /* step-end: 过渡时间结束后，直接变化 */
+            /* cubic-bezie: 贝塞尔曲线 cubic-bezier.com*/
+            transition-timing-function: sca;
+            transform: scale(1);
+        }
+        .ceng:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100%">
+        <div class="ceng"></div>
+    </div>
+    
+</body>
+</html>
