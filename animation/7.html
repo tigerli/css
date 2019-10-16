@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background: #7f8c8d;
+        }
+        main {
+            width: 100vw;
+            height: 100vh;
+            background: #34485e;
+            transform: scale(0);
+            /*animation-name 动画名称*/
+            animation-name: scale, bg, redius;
+            /*animation-duration 动画执行时间*/
+            animation-duration: 4s;
+            /*animation-fill-mode 填充模式*/
+            animation-fill-mode: forwards;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main::after{
+            content: 'lihu';
+            font-size: 2em;
+            color: #fff;
+            opacity: 0;
+            animation-name: opacity;
+            animation-duration: 2s;
+            /*animation-delay 动画延迟*/
+            animation-delay: 4s;
+            /*animation-fill-mode 填充模式*/
+            animation-fill-mode: forwards;
+        }
+        @keyframes opacity {
+            to{
+                opacity: .8;
+            }
+        }
+        @keyframes scale {
+            25% {
+                transform: scale(0.5);
+            }
+            50% {
+                transform: scale(1) rotate(360deg);
+            }
+            75% {
+                transform: scale(0.5);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        @keyframes bg {
+            25% {
+                background: #f1c40f;
+            }
+            50% {
+                background: #e74c3c;
+            }
+            75% {
+                background: #16a085;
+            }
+            100% {
+                background: #9b59b6;
+            }
+        }
+        @keyframes redius {
+            25%{
+                border-radius: 50%;
+            }
+            50%{
+                border-radius: 0;
+            }
+            75%{
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+    </main>
+</body>
+</html>
